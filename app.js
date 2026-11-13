@@ -1,7 +1,7 @@
 'use strict';
 const $=s=>document.querySelector(s);
 const requested=new URLSearchParams(location.search).get('day');
-const day=/^2026-(11-30|12-(0[1-9]|1[0-9]))$/.test(requested||'')?requested:'2026-12-09';
+const day=/^2026-(11-30|12-(0[1-9]|1[0-9]|21))$/.test(requested||'')?requested:'2026-12-09';
 const phase=day<'2026-12-01'?'teaser':day<'2026-12-09'?'daily':day<'2026-12-16'?'before':day<'2026-12-19'?'live':'after';
 const showFaq=day>='2026-12-13'&&day<='2026-12-18';
 const config={email:'academy@example.com',portal:'https://example.com',demo:true};
